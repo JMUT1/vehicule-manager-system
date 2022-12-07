@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeScreenComponent } from './components/home-screen/home-screen.component';
@@ -12,11 +12,13 @@ import { RequestViewComponent } from './components/request-view/request-view.com
     AppComponent,
     HomeScreenComponent,
     RequestFormComponent,
-    RequestViewComponent
+    RequestViewComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
