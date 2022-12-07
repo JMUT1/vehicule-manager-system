@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import{User} from "../../shared/info-client.model"
 
 @Component({
@@ -19,8 +19,21 @@ export class RequestFormComponent implements OnInit {
 
    private buildForm(){
     this.form = this.formBuiler.group({
-
+    name: ["", [Validators.required]],
+    lastName: ["", [Validators.required]],
+    registration: ["", [Validators.required]],
+    mobile: ["", [Validators.required]],
+    address: ["", [Validators.required]],
+    pickupDate: ["", [Validators.required]],
+    returnDate: ["", [Validators.required]],
     })
    }
+
+
+SaveSubmit(event: User){
+this.form.valid
+}
+
+
 
 }
