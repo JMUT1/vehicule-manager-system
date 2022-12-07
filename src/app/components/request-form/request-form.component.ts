@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import{User} from "../../shared/info-client.model"
+import{User} from "../../shared/info-client-model"
 
 @Component({
   selector: 'app-request-form',
@@ -30,8 +30,9 @@ export class RequestFormComponent implements OnInit {
    }
 
 
-SaveSubmit(event: User){
-this.form.valid
+SaveSubmit(event: Event){
+  event.preventDefault()
+  console.log(this.form.value);
 }
 
 
