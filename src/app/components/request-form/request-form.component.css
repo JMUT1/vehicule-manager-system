@@ -1,3 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
 input[type="text"],
 input[type="number"],
 input[type="date"],
@@ -22,14 +32,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-/* Add a background color and some padding around the form */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+  background-color: #13d013;
 }
