@@ -2,16 +2,17 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 200px;
+  max-width: fit-content;
   margin: auto;
   text-align: center;
   font-family: arial;
   margin-bottom: 30px;
+  padding: 20px;
 }
 
 .button-container {
@@ -22,13 +23,13 @@
 button {
   border: none;
   outline: 0;
-  padding: 12px;
   color: white;
   background-color: rgb(138, 132, 132);
   text-align: center;
   cursor: pointer;
   width: 40%;
-  font-size: 18px;
+  font-size: 12px;
+  border-radius: 20px;
 }
 
 button:hover {
