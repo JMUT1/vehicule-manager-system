@@ -7,6 +7,7 @@ import { HomeScreenComponent } from './components/home-screen/home-screen.compon
 import { RequestFormComponent } from './components/request-form/request-form.component';
 import { RequestViewComponent } from './components/request-view/request-view.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HeaderComponent } from './components/header/header.component';
     RequestFormComponent,
     RequestViewComponent,
     HeaderComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
