@@ -12,6 +12,7 @@ export class ServiceVehiculeDataService {
     this.userInfo = []
    }
 
+  //  LOCALSTORAGE
    addUser(info: User){
     this.userInfo = [];
     if(localStorage.getItem('Users') === null){
@@ -24,5 +25,15 @@ export class ServiceVehiculeDataService {
       localStorage.setItem('Users', JSON.stringify(this.userInfo))
     }
   }
+
+  // DELETE BNT HOME SCREEN
+
+  deleteTask(task: User){
+for(let i = 0; i< this.userInfo.length; i++ ){
+  if(task == this.userInfo[i]){
+    this.userInfo.splice(i,1)
+  }
+}
+}
 }
 
