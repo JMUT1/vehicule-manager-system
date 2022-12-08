@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import{User} from "../../shared/info-client-model"
 import {ServiceVehiculeDataService} from '../../service-vehicule-data.service'
-import { RouterLink } from '@angular/router';
+import { Router, NavigationExtras} from '@angular/router';
 
 @Component({
   selector: 'app-request-form',
@@ -13,7 +13,7 @@ export class RequestFormComponent implements OnInit {
   form: FormGroup
   userInfo: User
 
-  constructor(private formBuiler: FormBuilder, private vehiculeInfoService: ServiceVehiculeDataService ) {
+  constructor(private formBuiler: FormBuilder, private vehiculeInfoService: ServiceVehiculeDataService, private router: Router ) {
     this.buildForm()
    }
 
@@ -38,8 +38,7 @@ SaveSubmit(event: Event){
     console.log(this.form.value);
     this.vehiculeInfoService.addUser(this.form.value);
     this.form.reset()
-
-
+    this.router.navigateByUrl("/home-screen")
 }}
 
   }

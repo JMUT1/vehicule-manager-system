@@ -63,6 +63,6 @@
       formControlName="returnDate"
     />
 
-    <input routerLink="/home-screen" type="submit" value="Submit" />
+    <input [disabled]="form.invalid" type="submit" value="Submit" />
   </form>
 </div>
