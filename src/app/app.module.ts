@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeScreenComponent } from './components/home-screen/home-screen.component';
 import { RequestFormComponent } from './components/request-form/request-form.component';
 import { RequestViewComponent } from './components/request-view/request-view.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { RequestViewComponent } from './components/request-view/request-view.com
     HomeScreenComponent,
     RequestFormComponent,
     RequestViewComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
