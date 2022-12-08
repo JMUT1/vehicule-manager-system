@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import{User} from "../../shared/info-client-model"
 import {ServiceVehiculeDataService} from '../../service-vehicule-data.service'
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-request-form',
@@ -35,11 +36,11 @@ SaveSubmit(event: Event){
   event.preventDefault()
   if(this.form.valid){
     console.log(this.form.value);
-    this.vehiculeInfoService.addUser(this.form.value)
+    this.vehiculeInfoService.addUser(this.form.value);
+    this.form.reset()
+
+
+}}
 
   }
-}
 
-
-
-}
