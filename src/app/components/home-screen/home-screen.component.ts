@@ -12,6 +12,7 @@ export class HomeScreenComponent implements OnInit {
   constructor(public serviceVehicule:ServiceVehiculeDataService ) { }
 
   tasks: User[]
+
   ngOnInit(): void {
     this.tasks = this.serviceVehicule.getUser();
     console.log(this.tasks);

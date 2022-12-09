@@ -1,9 +1,9 @@
 export interface User{
 name: string;
 lastName: string;
-Registration: number;
-Mobile:number;
-Address: string;
-Pickup: Date;
-Return: Date
+registration: number;
+mobile:number;
+address: string;
+pickup: Date;
+return: Date
 }
