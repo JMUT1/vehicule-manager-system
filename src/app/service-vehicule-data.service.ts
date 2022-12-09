@@ -26,6 +26,17 @@ export class ServiceVehiculeDataService {
     }
   }
 
+  // GET THE USERS THAT ARE IN THE LOCALSTORAGE
+  getUser(){
+    if(localStorage.getItem === null){
+      return this.userInfo
+    } else {
+      this.userInfo = JSON.parse(localStorage.getItem('Users')!)
+      return this.userInfo
+    }
+  }
+
+
   // DELETE BNT HOME SCREEN
 
   deleteTask(task: User){

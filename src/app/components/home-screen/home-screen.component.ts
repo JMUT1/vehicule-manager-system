@@ -11,7 +11,17 @@ export class HomeScreenComponent implements OnInit {
 
   constructor(public serviceVehicule:ServiceVehiculeDataService ) { }
 
-  ngOnInit(): void {}
+  tasks: User[]
+  ngOnInit(): void {
+    this.tasks = this.serviceVehicule.getUser();
+    console.log(this.tasks);
+
+
+  }
+
+
+
+
 
   deleteService(task: User){
     if(confirm("Are you sure you want to delete?")){
