@@ -21,12 +21,9 @@ export class HomeScreenComponent implements OnInit {
   }
 
 
-
-
-
-  deleteService(task: User){
+  deleteService(tasks: User){
     if(confirm("Are you sure you want to delete?")){
-      this.serviceVehicule.deleteTask(task)
+      this.serviceVehicule.deleteTask(tasks)
     }
   }
 }
