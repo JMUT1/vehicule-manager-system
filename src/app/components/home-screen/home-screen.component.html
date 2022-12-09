@@ -1,13 +1,13 @@
 <div class="header-container">
   <h2>Vehicle Service Managment</h2>
 </div>
-<div class="flex-container" *ngFor="let user of tasks">
+<div class="flex-container" *ngFor="let user of tasks; let index = index">
   <div>
     <div>{{ user.name }} {{ user.lastName }}</div>
     <div>{{ user.registration }}</div>
     <div>
-      <button routerLink="/view-client-info">View</button>
-      <button>Delete</button>
+      <button (click)="viewInfo(index)">View</button>
+      <button (click)="deleteService(user)">Delete</button>
     </div>
   </div>
 </div>

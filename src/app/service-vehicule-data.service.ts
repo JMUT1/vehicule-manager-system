@@ -43,6 +43,7 @@ export class ServiceVehiculeDataService {
 for(let i = 0; i< this.userInfo.length; i++ ){
   if(task == this.userInfo[i]){
     this.userInfo.splice(i,1)
+    // AQUI PODEMOS BORRAR DEL LOCALSTORAGE EL DOCUMENTO COMPLETO
   }
 }
 }

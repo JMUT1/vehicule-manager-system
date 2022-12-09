@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, TitleStrategy } from '@angular/router';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+import { User } from 'src/app/shared/info-client-model';
 
 @Component({
   selector: 'app-request-view',
@@ -6,10 +10,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./request-view.component.css']
 })
 export class RequestViewComponent implements OnInit {
+user: {id: number}
 
-  constructor() { }
+
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.user = {
+      id: this.activatedRoute.snapshot.params['id']
+    };
+    this.activatedRoute.params.subscribe((data: Params)=>{
+      this.user = {
+        id: data['id']
+      }
+    })
   }
 
 }

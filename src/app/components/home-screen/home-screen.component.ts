@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from  "../../shared/info-client-model"
 import {ServiceVehiculeDataService} from "../../service-vehicule-data.service"
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-screen',
@@ -9,7 +10,7 @@ import {ServiceVehiculeDataService} from "../../service-vehicule-data.service"
 })
 export class HomeScreenComponent implements OnInit {
 
-  constructor(public serviceVehicule:ServiceVehiculeDataService ) { }
+  constructor(public serviceVehicule:ServiceVehiculeDataService, private route: Router) { }
 
   tasks: User[]
 
@@ -26,4 +27,12 @@ export class HomeScreenComponent implements OnInit {
       this.serviceVehicule.deleteTask(tasks)
     }
   }
+
+  viewInfo(index: any){
+    // this.route.navigateByUrl('')
+    console.log(index);
+
+
+  }
+
 }

@@ -8,9 +8,10 @@ import {PageNotFoundComponent} from './components/page-not-found/page-not-found.
 
 
 const routes: Routes = [
+  {path: "", redirectTo: "home-screen", pathMatch: "full"},
+    {path: 'home-screen', component:HomeScreenComponent },
   {path: 'client-form', component:RequestFormComponent },
-  {path: 'home-screen', component:HomeScreenComponent },
-  {path: 'view-client-info', component:RequestViewComponent },
+  {path: 'view-client-info/:id', component:RequestViewComponent },
   {path: '**', component: PageNotFoundComponent},
 ];
 
