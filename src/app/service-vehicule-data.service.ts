@@ -54,6 +54,9 @@ getrouteData(index: any){
 }
 
 // UNDO LOGIC
+  undoTask(){
+    this.userInfo.pop()
+  }
 
 }
 

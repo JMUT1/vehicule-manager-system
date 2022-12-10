@@ -30,7 +30,7 @@ export class HomeScreenComponent implements OnInit {
   }
 
   UndolastInfo(){
-
+    this.serviceVehicule.undoTask()
   }
 
 }
