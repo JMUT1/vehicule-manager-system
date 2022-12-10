@@ -30,7 +30,6 @@ export class HomeScreenComponent implements OnInit {
 
   viewInfo(index: any){
     this.route.navigateByUrl(`view-client-info/${index}`)
-    console.log(index);
 
 
   }

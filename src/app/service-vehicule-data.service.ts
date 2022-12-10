@@ -47,7 +47,11 @@ for(let i = 0; i< this.userInfo.length; i++ ){
     // AQUI PODEMOS BORRAR DEL LOCALSTORAGE EL DOCUMENTO COMPLETO
   }
 }}
+// URL PARAM
 
+getrouteData(index: string){
+  return (`view-client-info/${index}`)
+}
 
 }
 

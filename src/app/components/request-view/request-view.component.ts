@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import {ServiceVehiculeDataService} from "../../service-vehicule-data.service"
 
 @Component({
   selector: 'app-request-view',
@@ -12,7 +11,8 @@ export class RequestViewComponent implements OnInit {
 
 
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,  private serviceVehicule:ServiceVehiculeDataService  ) {
+  }
 
   ngOnInit() {
 
