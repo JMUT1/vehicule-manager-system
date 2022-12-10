@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import {User} from './shared/info-client-model'
 
 @Injectable({
@@ -45,7 +46,8 @@ for(let i = 0; i< this.userInfo.length; i++ ){
     this.userInfo.splice(i,1)
     // AQUI PODEMOS BORRAR DEL LOCALSTORAGE EL DOCUMENTO COMPLETO
   }
-}
-}
+}}
+
+
 }
 
