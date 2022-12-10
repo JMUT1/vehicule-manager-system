@@ -16,11 +16,8 @@ export class HomeScreenComponent implements OnInit {
 
   ngOnInit(): void {
     this.tasks = this.serviceVehicule.getUser();
-    console.log(this.tasks);
-
 
   }
-
 
   deleteService(tasks: User){
     if(confirm("Are you sure you want to delete?")){
@@ -30,7 +27,9 @@ export class HomeScreenComponent implements OnInit {
 
   viewInfo(index: any){
     this.route.navigateByUrl(`view-client-info/${index}`)
+  }
 
+  UndolastInfo(){
 
   }
 

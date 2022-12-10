@@ -13,7 +13,7 @@ export class ServiceVehiculeDataService {
     this.userInfo = []
    }
 
-  //  LOCALSTORAGE
+  //  LOCALSTORAGE ADD
    addUser(info: User){
     this.userInfo = [];
     if(localStorage.getItem('Users') === null){
@@ -49,9 +49,11 @@ for(let i = 0; i< this.userInfo.length; i++ ){
 }}
 // URL PARAM
 
-getrouteData(index: string){
+getrouteData(index: any){
   return (`view-client-info/${index}`)
 }
+
+// UNDO LOGIC
 
 }
 

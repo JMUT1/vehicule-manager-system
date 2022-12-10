@@ -1,14 +1,14 @@
 <h2 style="text-align: center">Vehicle View Service</h2>
 
-<div class="container">
+<div class="container" *ngFor="let item of tasks">
   <div class="card">
-    <p>First Name</p>
-    <p>Last Name</p>
-    <p>Vehicule Registration No.</p>
-    <p>Mobile Number</p>
-    <p>Address</p>
-    <p>Pickup Date</p>
-    <p>Return Date</p>
+    <p>Name:{{ item.name }}</p>
+    <p>Lastname: {{ item.lastName }}</p>
+    <p>Registration No.{{ item.registration }}</p>
+    <p>Mobile No. {{ item.mobile }}</p>
+    <p>Address: {{ item.address }}</p>
+    <p>PickUp {{ item.pickup }}</p>
+    <p>Return {{ item.return }}</p>
   </div>
 </div>
 
