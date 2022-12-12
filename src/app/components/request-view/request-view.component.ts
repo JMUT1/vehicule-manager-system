@@ -11,24 +11,27 @@ import {User} from  "../../shared/info-client-model"
 })
 export class RequestViewComponent implements OnInit {
 
-id: string;
 tasks: User[]
-vehicule:  any = ""
 
+clientId: any;
 
 
   constructor(private route: ActivatedRoute,  private serviceVehicule:ServiceVehiculeDataService  ) {
+    this.route.queryParams.subscribe(data =>{
+      console.log(data);
 
+    })
   }
 
 
 
-  ngOnInit() {this.tasks = this.serviceVehicule.getUser()
+  ngOnInit() {
 
-  console.log(this.tasks);
-
+    this.tasks = this.serviceVehicule.getUser()
+    console.log(this.tasks);
 
   }
+
 
 
   }

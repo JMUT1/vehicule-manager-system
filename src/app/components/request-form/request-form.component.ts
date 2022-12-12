@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import{User} from "../../shared/info-client-model"
 import {ServiceVehiculeDataService} from '../../service-vehicule-data.service'
-import { Router, NavigationExtras} from '@angular/router';
+import { Router, } from '@angular/router';
+import { formatDate } from '@angular/common';
+
 
 @Component({
   selector: 'app-request-form',
@@ -12,6 +14,8 @@ import { Router, NavigationExtras} from '@angular/router';
 export class RequestFormComponent implements OnInit {
   form: FormGroup
   userInfo: User
+
+
 
   constructor(private formBuiler: FormBuilder, private vehiculeInfoService: ServiceVehiculeDataService, private router: Router ) {
     this.buildForm()
@@ -26,7 +30,7 @@ export class RequestFormComponent implements OnInit {
     registration: ["", [Validators.required]],
     mobile: ["", [Validators.required]],
     address: ["", [Validators.required]],
-    pickupDate: ["", [Validators.required]],
+    pickupDate:[formatDate(new Date(), 'yyyy-MM-dd', "en")],
     returnDate: ["", [Validators.required]],
     })
    }

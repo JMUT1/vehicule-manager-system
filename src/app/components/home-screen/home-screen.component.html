@@ -1,20 +1,14 @@
-<div class="header-container">
-  <h2>Vehicle Service Managment</h2>
-</div>
-<div class="flex-container" *ngFor="let user of tasks; let index = index">
-  <div>
-    <div>{{ user.name }} {{ user.lastName }}</div>
-    <div>{{ user.registration }}</div>
-    <div>
+<table>
+  <tr>
+    <th>Full Name</th>
+    <th>Registration</th>
+  </tr>
+  <tr *ngFor="let user of tasks; let index = index">
+    <td>{{ user.name }} {{ user.lastName }}</td>
+    <td>{{ user.registration }}</td>
+    <td>
       <button (click)="viewInfo(index)">View</button>
       <button (click)="deleteService(user)">Delete</button>
-    </div>
-  </div>
-</div>
-
-<div class="btn-container">
-  <button (click)="UndolastInfo()">Undo</button>
-  <button style="align-self: flex-end" routerLink="/client-form">
-    Add New Request
-  </button>
-</div>
+    </td>
+  </tr>
+</table>

@@ -13,6 +13,7 @@ export class HomeScreenComponent implements OnInit {
   constructor(public serviceVehicule:ServiceVehiculeDataService, private route: Router) { }
 
   tasks: User[]
+  undoHandler = true;
 
   ngOnInit(): void {
     this.tasks = this.serviceVehicule.getUser();
@@ -26,11 +27,15 @@ export class HomeScreenComponent implements OnInit {
   }
 
   viewInfo(index: any){
-    this.route.navigateByUrl(`view-client-info/${index}`)
+     this.route.navigateByUrl(`view-client-info/${index}`)
+
+
+
   }
 
   UndolastInfo(){
     this.serviceVehicule.undoTask()
   }
+
 
 }

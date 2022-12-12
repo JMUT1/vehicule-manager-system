@@ -1,19 +1,11 @@
 <div class="container">
   <form [formGroup]="form" (submit)="SaveSubmit($event)">
     <label for="fname">First Name</label>
-    <input
-      type="text"
-      id="fname"
-      name="firstname"
-      placeholder="Type your name..."
-      formControlName="name"
-    />
+    <input type="text" placeholder="Type your name..." formControlName="name" />
 
     <label>Last Name</label>
     <input
       type="text"
-      id="lname"
-      name="lastname"
       placeholder="Type your last name..."
       formControlName="lastName"
     />
@@ -21,8 +13,6 @@
     <label>Vehicule Registration No.</label>
     <input
       type="number"
-      id="registration"
-      name="registration"
       placeholder="Registration No."
       formControlName="registration"
     />
@@ -38,8 +28,6 @@
 
     <label>Address</label>
     <textarea
-      name="address"
-      id="address"
       placeholder="Address..."
       cols="5"
       rows="3"
@@ -49,16 +37,12 @@
     <label>Pickup Date</label>
     <input
       type="date"
-      id="pickupDate"
-      name="pickupDate"
       placeholder="Pickup Date..."
       formControlName="pickupDate"
     />
     <label>Return Date</label>
     <input
       type="date"
-      id="returnDate"
-      name="returnDate"
       placeholder="Return Date..."
       formControlName="returnDate"
     />
