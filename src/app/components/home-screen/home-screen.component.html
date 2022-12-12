@@ -7,8 +7,14 @@
     <td>{{ user.name }} {{ user.lastName }}</td>
     <td>{{ user.registration }}</td>
     <td>
-      <button (click)="viewInfo(index)">View</button>
-      <button (click)="deleteService(user)">Delete</button>
+      <button (click)="viewInfo(index)">View</button> <button>Delete</button>
     </td>
   </tr>
 </table>
+
+<div class="btn-container">
+  <button (click)="UndolastInfo()">Undo</button>
+  <button style="align-self: flex-end" routerLink="/client-form">
+    Add New Request
+  </button>
+</div>

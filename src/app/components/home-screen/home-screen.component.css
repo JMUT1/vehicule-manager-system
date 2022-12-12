@@ -6,9 +6,8 @@ table {
 
 td,
 th {
-  border: 1px solid #dddddd;
   text-align: center;
-  padding: 8px;
+  padding: 15px;
 }
 
 tr:nth-child(even) {
@@ -16,6 +15,10 @@ tr:nth-child(even) {
 }
 
 button {
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 12px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
 }
