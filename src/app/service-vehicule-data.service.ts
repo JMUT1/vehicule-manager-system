@@ -43,6 +43,8 @@ export class ServiceVehiculeDataService {
   deleteTask(task: User){
 for(let i = 0; i< this.userInfo.length; i++ ){
   if(task == this.userInfo[i]){
+    let temp = this.userInfo.filter(item => item != task)
+    localStorage.setItem("Users", JSON.stringify(temp))
     this.userInfo.splice(i,1)
     // AQUI PODEMOS BORRAR DEL LOCALSTORAGE EL DOCUMENTO COMPLETO
   }

@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import{User} from "../../shared/info-client-model"
 import {ServiceVehiculeDataService} from '../../service-vehicule-data.service'
 import { Router, } from '@angular/router';
-import { formatDate } from '@angular/common';
 
 
 @Component({
@@ -30,7 +29,7 @@ export class RequestFormComponent implements OnInit {
     registration: ["", [Validators.required]],
     mobile: ["", [Validators.required]],
     address: ["", [Validators.required]],
-    pickupDate:[formatDate(new Date(), 'yyyy-MM-dd', "en")],
+    pickupDate: new Date().toISOString().split('T')[0],
     returnDate: ["", [Validators.required]],
     })
    }
@@ -44,6 +43,7 @@ SaveSubmit(event: Event){
     this.form.reset()
     this.router.navigateByUrl("/home-screen")
 }}
+
 
   }
 
