@@ -7,8 +7,8 @@
     <p>Registration No.{{ item.registration }}</p>
     <p>Mobile No. {{ item.mobile }}</p>
     <p>Address: {{ item.address }}</p>
-    <p>PickUp {{ item.pickup }}</p>
-    <p>Return {{ item.return }}</p>
+    <p>PickUp {{ item.pickupDate | date : "short" }}</p>
+    <p>Return {{ item.returnDate | date : "short" }}</p>
   </div>
 </div>
 

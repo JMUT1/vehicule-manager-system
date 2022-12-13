@@ -32,7 +32,7 @@ export class ServiceVehiculeDataService {
   }
 
   // GET THE USERS THAT ARE IN THE LOCALSTORAGE
-  getUser(){
+  getUsers(){
     if(localStorage.getItem === null){
       return this.userInfo
     } else {
@@ -40,6 +40,13 @@ export class ServiceVehiculeDataService {
       return this.userInfo
     }
   }
+  // GET USER
+  getUser(user: any){
+    console.log([JSON.parse(localStorage.getItem('Users')!)[user]]);
+      this.userInfo = [JSON.parse(localStorage.getItem('Users')!)[user]]
+      return this.userInfo
+  }
+
   // DELETE BNT HOME SCREEN
 
   deleteTask(task: User){
@@ -57,8 +64,6 @@ getrouteData(index: any){
 
 // UNDO LOGIC
   undoTask(){
-    console.log(this.deleteUser);
-
     this.userInfo.pop()
   }
 

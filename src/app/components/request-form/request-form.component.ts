@@ -38,11 +38,11 @@ export class RequestFormComponent implements OnInit {
 SaveSubmit(event: Event){
   event.preventDefault()
   if(this.form.valid){
-    console.log(this.form.value);
     this.vehiculeInfoService.addUser(this.form.value);
     this.form.reset()
     this.router.navigateByUrl("/home-screen")
 }}
+
 
 get nameField(){return this.form.get("name");}
 get lastNameField(){return this.form.get("lastName");}
@@ -54,5 +54,29 @@ get returnDateField(){return this.form.get("returnDate");}
 
 
 
-  }
 
+}
+
+
+
+
+
+//   let checkExistingForms = true;
+// //
+// // console.log(this.form.value);
+// // checkExistingforms = localStorage.getItem('Users').map(user => {
+// //   if(user.registration === this.form.value.registration) return false;
+// // })
+// //
+
+// if(this.form.valid && checkExistingForms){
+//   this.vehiculeInfoService.addUser(this.form.value);
+//   this.form.reset()
+//   this.router.navigateByUrl("/home-screen")
+// } else {
+//   if(!checkExistingForms) {
+//   // alert(this registration number already exists)
+//   } else {
+//   // alert(You haven't completed form dumbass)
+//   }
+// }}}

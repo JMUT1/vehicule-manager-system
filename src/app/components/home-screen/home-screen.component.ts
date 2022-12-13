@@ -16,7 +16,7 @@ export class HomeScreenComponent implements OnInit {
   undoHandler = true;
 
   ngOnInit(): void {
-    this.tasks = this.serviceVehicule.getUser();
+    this.tasks = this.serviceVehicule.getUsers();
 
   }
 
@@ -27,11 +27,7 @@ export class HomeScreenComponent implements OnInit {
   }
 
   viewInfo(index: any){
-     this.route.navigateByUrl(`view-client-info/${index}`)
-
-
-
-  }
+     this.route.navigateByUrl(`view-client-info/${index}`)  }
 
   UndolastInfo(){
     this.serviceVehicule.undoTask()
