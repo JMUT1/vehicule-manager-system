@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import{User} from "../../shared/info-client-model"
 import {ServiceVehiculeDataService} from '../../service-vehicule-data.service'
 import { Router, } from '@angular/router';
+import {MyValidations} from '../../utils/validation'
 
 
 @Component({
@@ -34,7 +35,6 @@ export class RequestFormComponent implements OnInit {
     })
    }
 
-
 SaveSubmit(event: Event){
   event.preventDefault()
   if(this.form.valid){
@@ -43,6 +43,15 @@ SaveSubmit(event: Event){
     this.form.reset()
     this.router.navigateByUrl("/home-screen")
 }}
+
+get nameField(){return this.form.get("name");}
+get lastNameField(){return this.form.get("lastName");}
+get registrationField(){return this.form.get("registration");}
+get mobileField(){return this.form.get("mobile");}
+get addressField(){return this.form.get("address");}
+get pickupDateField(){return this.form.get("pickupDate");}
+get returnDateField(){return this.form.get("returnDate");}
+
 
 
   }

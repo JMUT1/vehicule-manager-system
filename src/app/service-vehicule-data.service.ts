@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import {User} from './shared/info-client-model'
+import { delay } from 'rxjs';
+import { TitleStrategy } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +10,8 @@ import {User} from './shared/info-client-model'
 export class ServiceVehiculeDataService {
 
   userInfo: User[]
+
+  deleteUser : User[]
 
   constructor() {
     this.userInfo = []
@@ -36,29 +40,36 @@ export class ServiceVehiculeDataService {
       return this.userInfo
     }
   }
-
-
   // DELETE BNT HOME SCREEN
 
   deleteTask(task: User){
-for(let i = 0; i< this.userInfo.length; i++ ){
-  if(task == this.userInfo[i]){
+    for(let i = 0; i< this.userInfo.length; i++ ){
+      if(task == this.userInfo[i]){
     let temp = this.userInfo.filter(item => item != task)
     localStorage.setItem("Users", JSON.stringify(temp))
     this.userInfo.splice(i,1)
-    // AQUI PODEMOS BORRAR DEL LOCALSTORAGE EL DOCUMENTO COMPLETO
   }
 }}
 // URL PARAM
-
 getrouteData(index: any){
   return (`view-client-info/${index}`)
 }
 
 // UNDO LOGIC
   undoTask(){
+    console.log(this.deleteUser);
+
     this.userInfo.pop()
   }
+
+  // DUPLICATES IN THE USERINFO
+
+checkForm(form : any){
+  return of ({isFormAvailable: form !== "123"})
+  .pipe(
+    delay(500)
+  )
+}
 
 }
 

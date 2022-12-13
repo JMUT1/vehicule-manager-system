@@ -2,6 +2,9 @@
   <form [formGroup]="form" (submit)="SaveSubmit($event)">
     <label for="fname">First Name</label>
     <input type="text" placeholder="Type your name..." formControlName="name" />
+    <div style="color: red" *ngIf="nameField?.errors && nameField?.dirty">
+      <small *ngIf="nameField?.hasError('required')">Field Required</small>
+    </div>
 
     <label>Last Name</label>
     <input
@@ -16,6 +19,10 @@
       placeholder="Registration No."
       formControlName="registration"
     />
+    <!-- ASYNC VALIDATION -->
+    <div style="color: red" *ngIf="nameField?.errors && nameField?.dirty">
+      <small *ngIf="nameField?.hasError('notAvailable')">Field Required</small>
+    </div>
 
     <label>Mobile Number</label>
     <input
