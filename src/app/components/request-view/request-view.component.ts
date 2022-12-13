@@ -16,7 +16,6 @@ export class RequestViewComponent implements OnInit {
   constructor(private route: ActivatedRoute,  private serviceVehicule:ServiceVehiculeDataService  ) {}
 
   id: number
-  detailClient : any
 
   ngOnInit() {
     this.route.params.subscribe((params)=>{

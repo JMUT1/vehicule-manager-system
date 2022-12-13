@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import {User} from './shared/info-client-model'
 import { delay } from 'rxjs';
-import { TitleStrategy } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -70,7 +69,7 @@ getrouteData(index: any){
   // DUPLICATES IN THE USERINFO
 
 checkForm(form : any){
-  return of ({isFormAvailable: form !== "123"})
+  return of ({isFormAvailable: form !== this.userInfo})
   .pipe(
     delay(500)
   )
