@@ -2,9 +2,9 @@
 
 <div class="container" *ngFor="let item of tasks">
   <div class="card">
-    <p>Name:{{ item.name }}</p>
-    <p>Lastname: {{ item.lastName }}</p>
-    <p>Registration No.{{ item.registration }}</p>
+    <p>Name: {{ item.name }}</p>
+    <p>Last name: {{ item.lastName }}</p>
+    <p>Registration No: {{ item.registration }}</p>
     <p>Mobile No. {{ item.mobile }}</p>
     <p>Address: {{ item.address }}</p>
     <p>PickUp: {{ item.pickupDate | date : "mediumDate" }}</p>
